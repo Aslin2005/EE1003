@@ -62,7 +62,7 @@ u' + u^2 + 2y = 0
 This results in the following system of first-order differential equations:
 \begin{align}
 \frac{dy}{dx} &= u \\
-\frac{du}{dx} &= -u^2 - 2y
+u' =\frac{du}{dx} &= -u^2 - 2y
 \end{align}
 
 This system can now be solved using Euler's method.
@@ -73,7 +73,8 @@ Euler's method approximates the solution of a system of first-order differential
 \begin{align}
 y_{n+1} &= y_n + h \cdot u_n \\
 u_{n+1} &= u_n + h \cdot (u'_n) \\
-x_{n+1} &= x_n + h
+x_{n+1} &= x_n + h \\
+u'_{n+1} &= -(u_n)^2 - 2y_n
 \end{align}
 
 Where:
