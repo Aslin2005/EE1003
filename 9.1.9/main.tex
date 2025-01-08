@@ -71,10 +71,10 @@ This system can now be solved using Euler's method.
 \textbf{Euler’s Method:}\\
 Euler's method approximates the solution of a system of first-order differential equations by updating the solution iteratively. The update rules are given by:
 \begin{align}
+u'_{n} &= -(u_n)^2 - 2y_n \\	
 y_{n+1} &= y_n + h \cdot u_n \\
 u_{n+1} &= u_n + h \cdot (u'_n) \\
-x_{n+1} &= x_n + h \\
-u'_{n+1} &= -(u_n)^2 - 2y_n
+x_{n+1} &= x_n + h 
 \end{align}
 
 Where:
