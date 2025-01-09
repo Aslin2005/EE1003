@@ -1,0 +1,16 @@
+\frametitle{Python code}
+\begin{minted}[bgcolor=bg, linenos, fontsize=\small, breaklines]{python}
+# The function signature is expected to accept initial conditions, step size, range, and arrays for independent variable (x) and solution (y)
+ode_solver.solve_ode(c_double(y0), c_double(y_prime0), c_double(dx), c_double(x_max), x_values_ctypes, y_values_ctypes, c_int(num_steps))
+
+# Plot the results of the ODE solution
+plt.figure(figsize=(10, 6))
+plt.plot(np.arange(0, x_max + dx, dx), y_values, label="y(x)")
+plt.title("Numerical Solution of a Differential Equation Using C Library")
+plt.xlabel("x")
+plt.ylabel("y(x)")
+plt.grid()
+plt.legend()
+plt.show()
+
+\end{minted}

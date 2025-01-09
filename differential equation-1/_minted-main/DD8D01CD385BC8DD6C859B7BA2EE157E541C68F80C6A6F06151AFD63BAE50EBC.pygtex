@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Define the number of steps to compute based on the range and step size}
+\PYG{n}{num\PYGZus{}steps} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x\PYGZus{}max} \PYG{o}{/} \PYG{n}{dx}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} Create an array to store the computed values of y(x) at each step}
+\PYG{n}{y\PYGZus{}values} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{num\PYGZus{}steps}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{float64}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Prepare the input arguments for the C function}
+\PYG{n}{x\PYGZus{}values\PYGZus{}ctypes} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{x\PYGZus{}max} \PYG{o}{+} \PYG{n}{dx}\PYG{p}{,} \PYG{n}{dx}\PYG{p}{)}\PYG{o}{.}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{data\PYGZus{}as}\PYG{p}{(}\PYG{n}{POINTER}\PYG{p}{(}\PYG{n}{c\PYGZus{}double}\PYG{p}{))}
+\PYG{n}{y\PYGZus{}values\PYGZus{}ctypes} \PYG{o}{=} \PYG{n}{y\PYGZus{}values}\PYG{o}{.}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{data\PYGZus{}as}\PYG{p}{(}\PYG{n}{POINTER}\PYG{p}{(}\PYG{n}{c\PYGZus{}double}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} Call the ODE solver function from the C library to compute the solution}
+
+\end{Verbatim}

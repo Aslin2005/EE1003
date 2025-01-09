@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{     }\PYG{c+c1}{// Update y and y\PYGZsq{}}
+\PYG{+w}{        }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{y\PYGZus{}new}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{y\PYGZus{}prime}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{dt}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{y\PYGZus{}prime}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{y\PYGZus{}prime}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{y\PYGZus{}double\PYGZus{}prime}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{dt}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{c+c1}{// Store result}
+\PYG{+w}{        }\PYG{n}{y\PYGZus{}values}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{y\PYGZus{}new}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

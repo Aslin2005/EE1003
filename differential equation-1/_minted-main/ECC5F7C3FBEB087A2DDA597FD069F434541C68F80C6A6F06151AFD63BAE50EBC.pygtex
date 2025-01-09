@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{ctypes} \PYG{k+kn}{import} \PYG{n}{CDLL}\PYG{p}{,} \PYG{n}{POINTER}\PYG{p}{,} \PYG{n}{c\PYGZus{}double}\PYG{p}{,} \PYG{n}{c\PYGZus{}int}
+
+\PYG{c+c1}{\PYGZsh{} Load the shared C library that contains the ODE solver function}
+\PYG{n}{ode\PYGZus{}solver} \PYG{o}{=} \PYG{n}{CDLL}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}./ode\PYGZus{}solver.so\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Define initial conditions and parameters}
+\PYG{n}{y0} \PYG{o}{=} \PYG{l+m+mf}{0.1}      \PYG{c+c1}{\PYGZsh{} Initial value of the dependent variable y(x)}
+\PYG{n}{y\PYGZus{}prime0} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.1}  \PYG{c+c1}{\PYGZsh{} Initial value of the first derivative of y, i.e., y\PYGZsq{}(x)}
+\PYG{n}{x\PYGZus{}max} \PYG{o}{=} \PYG{l+m+mi}{10}    \PYG{c+c1}{\PYGZsh{} The maximum value of the independent variable (x) (end of range)}
+\PYG{n}{dx} \PYG{o}{=} \PYG{l+m+mf}{0.001}    \PYG{c+c1}{\PYGZsh{} The step size for the independent variable (x)}
+
+\end{Verbatim}

@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} The function signature is expected to accept initial conditions, step size, range, and arrays for independent variable (x) and solution (y)}
+\PYG{n}{ode\PYGZus{}solver}\PYG{o}{.}\PYG{n}{solve\PYGZus{}ode}\PYG{p}{(}\PYG{n}{c\PYGZus{}double}\PYG{p}{(}\PYG{n}{y0}\PYG{p}{),} \PYG{n}{c\PYGZus{}double}\PYG{p}{(}\PYG{n}{y\PYGZus{}prime0}\PYG{p}{),} \PYG{n}{c\PYGZus{}double}\PYG{p}{(}\PYG{n}{dx}\PYG{p}{),} \PYG{n}{c\PYGZus{}double}\PYG{p}{(}\PYG{n}{x\PYGZus{}max}\PYG{p}{),} \PYG{n}{x\PYGZus{}values\PYGZus{}ctypes}\PYG{p}{,} \PYG{n}{y\PYGZus{}values\PYGZus{}ctypes}\PYG{p}{,} \PYG{n}{c\PYGZus{}int}\PYG{p}{(}\PYG{n}{num\PYGZus{}steps}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} Plot the results of the ODE solution}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{x\PYGZus{}max} \PYG{o}{+} \PYG{n}{dx}\PYG{p}{,} \PYG{n}{dx}\PYG{p}{),} \PYG{n}{y\PYGZus{}values}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}y(x)\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Numerical Solution of a Differential Equation Using C Library\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}y(x)\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+
+\end{Verbatim}
